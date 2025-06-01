@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   // Load the content from the JSON file
-  fetch('../../components/header.html')
+  fetch('../components/header.html')
     .then((response) => {
       if (response.ok) {
         return response.text();
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
       console.error('Error loading header:', error);
     });
 
-  fetch('../../components/footer.html')
+  fetch('../components/footer.html')
     .then((response) => {
       if (response.ok) {
         return response.text();
