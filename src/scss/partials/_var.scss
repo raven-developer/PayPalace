@@ -1,0 +1,113 @@
+// FONT
+@font-face {
+  font-family: 'Syne';
+  src: url('../fonts/Syne-Bold.woff2') format('woff2'), url('../fonts/Syne-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Syne';
+  src: url('../fonts/Syne-SemiBold.woff2') format('woff2'), url('../fonts/Syne-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Syne';
+  src: url('../fonts/Syne-Regular.woff2') format('woff2'), url('../fonts/Syne-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Syne';
+  src: url('../fonts/Syne-ExtraBold.woff2') format('woff2'), url('../fonts/Syne-ExtraBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Syne';
+  src: url('../fonts/Syne-Medium.woff2') format('woff2'), url('../fonts/Syne-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+// COLORS
+// BLUE
+$blue-10: #e7f0ff;
+$blue-30: #a7c4ff;
+$blue-50: #8694b5;
+$blue-70: #005cff;
+$blue-90: #0f1e3b;
+$red: #ff0000;
+
+// ABSOLUTE COLORS
+$white: #ffffff;
+$black-90: #2a2f3c;
+$black: #0a0f1c;
+$gray: #e7ebf4;
+
+// GAPS AND RADIUS
+$round-60: 60px;
+$round-55: 55px;
+$round-50: 50px;
+$round-45: 45px;
+$round-40: 40px;
+$round-35: 35px;
+$round-30: 30px;
+$round-25: 25px;
+$round-20: 20px;
+$round-15: 15px;
+$round-10: 10px;
+$round-5: 5px;
+
+$by-5-values: (
+  70: 70px,
+  65: 65px,
+  60: 60px,
+  55: 55px,
+  50: 50px,
+  45: 45px,
+  40: 40px,
+  35: 35px,
+  30: 30px,
+  25: 25px,
+  20: 20px,
+  15: 15px,
+  10: 10px,
+  5: 5px,
+);
+
+@each $key, $value in $by-5-values {
+  .gap-#{$key} {
+    gap: $value;
+  }
+}
+
+// FOR CAROUSEL
+$scroll-speed: 25s;
+$fade-size: 120px;
+
+// KEYFRAMES
+// Keyframes for fade-in animation
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// Keyframes for infinite scroll animation
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

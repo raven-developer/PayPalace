@@ -1,0 +1,66 @@
+// Buttons, cards, modals, etc.
+@use 'mixins' as *;
+@use 'var' as *;
+
+.button {
+  display: inline-block;
+  padding: 20px 36px;
+  border-radius: 50px;
+  transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+  &--is_primary {
+    background-color: $blue-70;
+
+    .button-span {
+      color: $white;
+      white-space: nowrap;
+    }
+
+    &:hover {
+      background-color: $blue-90;
+      transform: rotate(4deg);
+    }
+  }
+}
+
+.section-card {
+  border-radius: $round-60;
+  padding: 70px 40px;
+  &--white {
+    background-color: $white;
+  }
+}
+
+.icon-card {
+  &--variant-1 {
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+
+    .card-icon {
+      width: 72px;
+      aspect-ratio: 1;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.logo-carousel-block {
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0, black $fade-size, black calc(100% - #{$fade-size}), transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, black $fade-size, black calc(100% - #{$fade-size}), transparent 100%);
+
+  .logo-carousel-wrapper {
+    display: flex;
+    width: max-content;
+    opacity: 0.8;
+    animation: infinite-scroll $scroll-speed linear infinite;
+  }
+
+  .logo-carousel-item {
+    height: 44px;
+    flex: 0 0 auto;
+  }
+}

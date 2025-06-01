@@ -1,0 +1,28 @@
+{
+	"name": "paypalace",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"watch": "sass --watch src/scss/main.scss:src/css/styles.css --source-map",
+		"compile": "sass src/scss/main.scss:src/css/styles.css --source-map --style=expanded",
+		"build": "sass src/scss/main.scss:src/css/styles.css --no-source-map --style=compressed",
+		"clean": "rm -rf src/css/*",
+		"serve": "live-server src",
+		"start": "npm run watch",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/raven-developer/PayPalace.git"
+	},
+	"author": "_pixl",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/raven-developer/PayPalace/issues"
+	},
+	"homepage": "https://github.com/raven-developer/PayPalace#readme",
+	"description": "",
+	"dependencies": {
+		"sass": "^1.89.1"
+	}
+}

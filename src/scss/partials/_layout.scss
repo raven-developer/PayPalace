@@ -1,0 +1,70 @@
+@use 'mixins' as *;
+@use 'var' as *;
+
+// GENERAL LAYOUT STYLES
+.section-wrapper {
+  max-width: 1344px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.section {
+  padding: 70px 0;
+}
+
+.home_about-section.section {
+  padding: 0;
+}
+
+.hero-section {
+  .hero-text-block {
+    @include center-x;
+    justify-content: space-between;
+  }
+
+  .hero-image-block {
+    max-height: 75vh;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: $round-60;
+    @include flex-center;
+  }
+}
+
+.w-home_about-container {
+  .section-image-block {
+    flex: 0.8;
+
+    img {
+      object-fit: cover;
+    }
+  }
+}
+
+.home_about {
+  &--img-1 {
+    width: calc(100% - 192px);
+    height: calc(100% - 61px);
+    border-radius: $round-20;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+  &--img-2 {
+    width: calc(100% - 192px);
+    height: calc(100% - 61px);
+    border-radius: $round-20;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+}
+
+.home_about-section .section-card {
+  padding: 70px 40px 40px;
+}

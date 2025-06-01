@@ -1,0 +1,107 @@
+@use 'mixins' as *;
+@use 'var' as *;
+
+.hero-heading {
+  @include font(600, 4.5rem, none);
+  letter-spacing: -2px;
+}
+
+.section-heading {
+  @include font(600, 3.375rem, none);
+  letter-spacing: -2px;
+}
+
+h3 {
+  @include font(600, 2.5rem, none);
+  letter-spacing: -2px;
+}
+
+h4 {
+  @include font(600, 1.875rem, none);
+}
+
+h5 {
+  @include font(600, 1.4375, none);
+}
+
+.hero-heading,
+.section-heading {
+  line-height: 1.2;
+  color: $black;
+}
+
+.par-reg,
+.button,
+span {
+  @include font(normal, 1.4375rem, none);
+}
+
+.par-sub {
+  @include font(normal, 1.75rem, none);
+}
+
+.par-sm {
+  @include font(normal, 1.0625rem, none);
+  color: $black-90;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.section-heading-block {
+  .section-heading.center-text {
+    max-width: 805px;
+    margin: 0 auto;
+  }
+}
+
+// FLEXBOX
+.flex {
+  display: flex;
+}
+
+.col {
+  @include flex-settings(column);
+}
+
+.col-rev {
+  @include flex-settings(column-reverse);
+}
+
+.row {
+  @include flex-settings(row);
+}
+
+.row-rev {
+  @include flex-settings(row-reverse);
+}
+
+.is_x-centered {
+  @include center-x;
+}
+
+.is_y-centered {
+  @include center-y;
+}
+
+.section-image-block,
+.section-text-block {
+  flex: 1;
+}
+
+// GRID
+@media screen and (min-width: 1440px) {
+  //Grid Layouts
+  .grid-2-col {
+    @include grid-col(2);
+  }
+
+  .grid-3-col {
+    @include grid-col(3);
+  }
+
+  .grid-4-col {
+    @include grid-col(4);
+  }
+}

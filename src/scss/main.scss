@@ -1,0 +1,19 @@
+// Reset Style
+@use 'partials/reset';
+// Variables and Components
+@use 'partials/var' as *;
+@use 'partials/mixins' as *;
+@use 'partials/comp';
+@use 'partials/global';
+// Header and Footer
+@use 'partials/footer';
+@use 'partials/header';
+// Layout
+@use 'partials/layout';
+// Responsive Design
+@use 'partials/resp';
+
+html,
+body {
+  background-color: $blue-10;
+}

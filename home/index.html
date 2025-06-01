@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Visual Experience for Wireless POS | PayPalace</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/paypalace-favicon.png" type="image/x-icon" />
+
+    <!-- External CSS/JS -->
+    <link rel="stylesheet" href="../src/css/styles.css" />
+    <script src="../src/js/headerFooterLoader.js" defer></script>
+    <script src="../src/js/contentLoader.js" defer></script>
+  </head>
+  <body data-page="home">
+    <header role="contentinfo" class id="global-header"></header>
+
+    <main id="main-content" class="content" role="main">
+      <!-- HERO SECTION -->
+      <section class="hero-section section" id="w-hero-section">
+        <div class="section-wrapper w-hero-container">
+          <div class="content-wrapper col gap-30">
+            <div class="content-block hero-heading-block col gap-30">
+              <h1 class="hero-heading">An entirely new visual experience for wireless POS devices</h1>
+              <div class="hero-text-block row-rev gap-50">
+                <p class="par-sub">Our guiding principle is to support many thriving small and medium sized businesses.</p>
+                <a class="button button--is_primary" href="../contact/"><span class="button-span">Contact Us</span></a>
+              </div>
+            </div>
+            <div class="hero-image-block">
+              <img src="../assets/image of holding a wireless pos device.jpg" alt="image of holding a wireless pos device" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LOGO CAROUSEL -->
+      <section class="logo_carousel-section section" id="w-logo_carousel-section">
+        <div class="section-wrapper w-logo_carousel-container">
+          <div class="logo-carousel-block">
+            <ul class="logo-carousel-wrapper gap-70" id="logo-carousel-wrapper">
+              <li class="logo-carousel-item"><img src="https://cdn.svgporn.com/logos/adobe.svg" alt="Adobe" /></li>
+              <li class="logo-carousel-item"><img src="https://cdn.svgporn.com/logos/meta-icon.svg" alt="Meta" /></li>
+              <li class="logo-carousel-item"><img src="https://cdn.svgporn.com/logos/miro.svg" alt="Miro" /></li>
+              <li class="logo-carousel-item"><img src="https://cdn.svgporn.com/logos/htmx-icon.svg" alt="HTMX" /></li>
+              <li class="logo-carousel-item"><img src="https://cdn.svgporn.com/logos/google-gemini.svg" alt="Gemini" /></li>
+              <li class="logo-carousel-item"><img src="https://cdn.svgporn.com/logos/incident-icon.svg" alt="Incident" /></li>
+              <li class="logo-carousel-item"><img src="https://cdn.svgporn.com/logos/claude.svg" alt="Claude" /></li>
+              <li class="logo-carousel-item"><img src="https://cdn.svgporn.com/logos/nvm.svg" alt="nvm" /></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT US -->
+      <section class="home_about-section section" id="w-home_about-section">
+        <div class="section-wrapper w-home_about-container">
+          <div class="content-wrapper section-card section-card--white col gap-35">
+            <div class="content-block section-heading-block">
+              <h2 class="section-heading center-text">Work faster and smarter with our scalable payment</h2>
+            </div>
+            <div class="content-block is_x-centered row-rev gap-60">
+              <div class="section-text-block col gap-70">
+                <p class="par-sub">Our guiding principle is to support many thriving small and medium sized businesses.</p>
+                <div class="grid-3-col gap-30">
+                  <div class="icon-card icon-card--variant-1 ic-2-1">
+                    <div class="card-icon">
+                      <img src="../assets/icons/Card 2.svg" alt="ATM Card Icon" />
+                    </div>
+                    <div class="card-content">
+                      <p class="par-sm">Smart terminals are designed to give you seamless payment experience.</p>
+                    </div>
+                  </div>
+                  <div class="icon-card icon-card--variant-1 ic-2-2">
+                    <div class="card-icon">
+                      <img src="../assets/icons/Dollar Square.svg" alt="Dollar Sign Icon" />
+                    </div>
+                    <div class="card-content">
+                      <p class="par-sm">Accept digital payments anywhere with advanced security features.</p>
+                    </div>
+                  </div>
+                  <div class="icon-card icon-card--variant-1 ic-2-3">
+                    <div class="card-icon">
+                      <img src="../assets/icons/Wallet.svg" alt="Wallet Icon" />
+                    </div>
+                    <div class="card-content">
+                      <p class="par-sm">Sync your payment processing with your online shopping cart.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="section-image-block" style="height: 503px; position: relative">
+                <img src="../assets/resolven4 1.jpg" class="home_about--img-1" alt="Person sitting with a laptop on lap" />
+                <img src="../assets/resolven4 2.jpg" class="home_about--img-2" alt="Person operating a modern POS" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer role="contentinfo" class id="global-footer"></footer>
+    <!-- External JavaScript -->
+    <script src="scripts.js" defer></script>
+    <script>
+      const carousel = document.getElementById('logo-carousel-wrapper');
+      const items = Array.from(carousel.children);
+
+      // Clone and append each item
+      items.forEach((item) => {
+        const clone = item.cloneNode(true);
+        carousel.appendChild(clone);
+      });
+    </script>
+  </body>
+</html>
