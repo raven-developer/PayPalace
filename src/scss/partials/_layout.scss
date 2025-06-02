@@ -1,3 +1,4 @@
+// ALL ADJUSTMENTS TO THE GLOBAL LAYOUT OF THE SITE
 @use 'mixins' as *;
 @use 'var' as *;
 
@@ -67,4 +68,14 @@
 
 .home_about-section .section-card {
   padding: 70px 40px 40px;
+}
+
+.ic-3-3 {
+  @media screen and (min-width: 1024px) {
+    margin-top: 80px;
+  }
+}
+
+.cta-section.section-main-03 .section-card--image {
+  background: url('/assets/resolven5\ 2.jpg') no-repeat center center/cover;
 }

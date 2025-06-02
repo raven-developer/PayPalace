@@ -279,6 +279,7 @@ div {
   padding: 20px 36px;
   border-radius: 50px;
   transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  text-align: center;
 }
 .button--is_primary {
   background-color: #005cff;
@@ -299,6 +300,21 @@ div {
 .section-card--white {
   background-color: #ffffff;
 }
+.section-card--image {
+  height: 80vh;
+  width: 100%;
+  overflow: hidden;
+  flex-wrap: wrap;
+  display: flex;
+  place-content: center;
+}
+.section-card--image .section-heading-block {
+  background-color: #ffffff;
+  padding: 50px 40px;
+  border-radius: 20px;
+  max-width: 482px;
+  gap: 100px;
+}
 
 .icon-card--variant-1 {
   background: none;
@@ -308,8 +324,29 @@ div {
 }
 .icon-card--variant-1 .card-icon {
   width: 72px;
-  aspect-ratio: 1;
+  height: 72px;
   margin-bottom: 20px;
+}
+.icon-card--variant-2 {
+  background-color: #ffffff;
+  padding: 50px 40px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.icon-card--variant-2 .card-label-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.icon-card--variant-2 .card-label {
+  width: 55%;
+}
+.icon-card--variant-2 .card-icon-block {
+  max-width: 144px;
+  max-height: 144px;
 }
 
 .logo-carousel-block {
@@ -349,7 +386,7 @@ div {
   letter-spacing: -2px;
 }
 
-h3 {
+.card-label {
   font-family: "Syne";
   font-weight: 600;
   font-size: 2.5rem;
@@ -401,6 +438,10 @@ span {
   font-optical-sizing: auto;
   text-transform: none;
   text-decoration: none;
+}
+
+p {
+  color: #2a2f3c;
 }
 
 .par-sm {
@@ -471,6 +512,25 @@ span {
   .grid-4-col {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 993px) {
+  .grid-2-col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-3-col,
+  .grid-4-col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 992px) {
+  .grid-2-col,
+  .grid-3-col,
+  .grid-4-col {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 .nav-wrapper {
@@ -561,6 +621,16 @@ span {
 
 .home_about-section .section-card {
   padding: 70px 40px 40px;
+}
+
+@media screen and (min-width: 1024px) {
+  .ic-3-3 {
+    margin-top: 80px;
+  }
+}
+
+.cta-section.section-main-03 .section-card--image {
+  background: url("/assets/resolven5 2.jpg") no-repeat center center/cover;
 }
 
 html,

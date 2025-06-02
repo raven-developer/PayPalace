@@ -2,11 +2,13 @@
 @use 'mixins' as *;
 @use 'var' as *;
 
+// BUTTON STYLES
 .button {
   display: inline-block;
   padding: 20px 36px;
   border-radius: 50px;
   transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  text-align: center;
 
   &--is_primary {
     background-color: $blue-70;
@@ -23,14 +25,32 @@
   }
 }
 
+// SECTION STYLES
 .section-card {
   border-radius: $round-60;
   padding: 70px 40px;
   &--white {
     background-color: $white;
   }
+
+  &--image {
+    height: 80vh;
+    width: 100%;
+    overflow: hidden;
+    flex-wrap: wrap;
+    @include flex-center;
+
+    .section-heading-block {
+      background-color: $white;
+      padding: 50px 40px;
+      border-radius: $round-20;
+      max-width: 482px;
+      gap: 100px;
+    }
+  }
 }
 
+// CARD STYLES
 .icon-card {
   &--variant-1 {
     background: none;
@@ -40,8 +60,31 @@
 
     .card-icon {
       width: 72px;
-      aspect-ratio: 1;
+      height: 72px;
       margin-bottom: 20px;
+    }
+  }
+
+  &--variant-2 {
+    background-color: $white;
+    padding: 50px 40px;
+    border-radius: $round-30;
+    @include flex-column;
+    gap: $round-15;
+
+    .card-label-block {
+      @include flex-row;
+      @include center-x;
+      justify-content: space-between;
+    }
+
+    .card-label {
+      width: 55%;
+    }
+
+    .card-icon-block {
+      max-width: 144px;
+      max-height: 144px;
     }
   }
 }
@@ -49,8 +92,20 @@
 .logo-carousel-block {
   width: 100%;
   overflow: hidden;
-  mask-image: linear-gradient(to right, transparent 0, black $fade-size, black calc(100% - #{$fade-size}), transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0, black $fade-size, black calc(100% - #{$fade-size}), transparent 100%);
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    black $fade-size,
+    black calc(100% - #{$fade-size}),
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    black $fade-size,
+    black calc(100% - #{$fade-size}),
+    transparent 100%
+  );
 
   .logo-carousel-wrapper {
     display: flex;
