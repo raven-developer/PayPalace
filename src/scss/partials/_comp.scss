@@ -34,6 +34,7 @@
   }
 
   &--image {
+    max-height: 780px;
     height: 80vh;
     width: 100%;
     overflow: hidden;
@@ -45,8 +46,17 @@
       padding: 50px 40px;
       border-radius: $round-20;
       max-width: 482px;
-      gap: 100px;
+      gap: 80px;
     }
+  }
+}
+
+.section-grid {
+  display: grid;
+
+  &--2-col {
+  }
+  &--3-col {
   }
 }
 
@@ -89,29 +99,43 @@
   }
 }
 
+.text-card {
+  &--variant-1 {
+    background-color: $blue-90;
+    padding: 40px 50px;
+    border-radius: $round-20;
+    @include flex-column;
+    gap: $round-15;
+
+    .card-label-block {
+      @include flex-row;
+      @include center-x;
+      justify-content: space-between;
+    }
+
+    .card-content-block .par-reg,
+    .card-content-block .par-sm {
+      color: $gray;
+    }
+
+    .card-label {
+      color: $white;
+    }
+  }
+}
+
+// LOGO CAROUSEL STYLES
 .logo-carousel-block {
   width: 100%;
   overflow: hidden;
-  mask-image: linear-gradient(
-    to right,
-    transparent 0,
-    black $fade-size,
-    black calc(100% - #{$fade-size}),
-    transparent 100%
-  );
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0,
-    black $fade-size,
-    black calc(100% - #{$fade-size}),
-    transparent 100%
-  );
+  mask-image: linear-gradient(to right, transparent 0, black 120px, black calc(100% - 120px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, black 120px, black calc(100% - 120px), transparent 100%);
 
   .logo-carousel-wrapper {
     display: flex;
     width: max-content;
     opacity: 0.8;
-    animation: infinite-scroll $scroll-speed linear infinite;
+    animation: infinite-scroll 50s linear infinite;
   }
 
   .logo-carousel-item {

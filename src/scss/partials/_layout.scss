@@ -13,6 +13,27 @@
   padding: 70px 0;
 }
 
+.content-block {
+  max-height: max-content;
+}
+
+.is_sticky {
+  @media screen and (min-width: 1025px) {
+    position: sticky;
+    top: calc(84px + 40px); // ANav height + padding
+  }
+}
+
+.section-heading-block {
+  @include flex-column;
+  align-items: flex-start;
+  gap: $round-25;
+
+  .button {
+    margin-top: $round-25;
+  }
+}
+// SECTION STYLES
 .home_about-section.section {
   padding: 0;
 }
@@ -66,7 +87,7 @@
   }
 }
 
-.home_about-section .section-card {
+.section-main-01 .section-card {
   padding: 70px 40px 40px;
 }
 
@@ -76,6 +97,10 @@
   }
 }
 
-.cta-section.section-main-03 .section-card--image {
-  background: url('/assets/resolven5\ 2.jpg') no-repeat center center/cover;
+.cta-section .section-card--image {
+  background: url('../../assets/resolven5\ 2.jpg') no-repeat center center/cover;
+}
+
+.section-main-03 .section-grid--3-col .section-card-block {
+  grid-column: span 2;
 }

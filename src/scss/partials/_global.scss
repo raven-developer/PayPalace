@@ -133,3 +133,12 @@ p {
     @include grid-col(1);
   }
 }
+
+.section-grid {
+  &--2-col {
+    @extend .grid-2-col;
+  }
+  &--3-col {
+    @extend .grid-3-col;
+  }
+}
