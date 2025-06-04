@@ -33,6 +33,36 @@
     margin-top: $round-25;
   }
 }
+
+.fwidth-wrapper {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px 0 0;
+
+  .section-image-block {
+    flex: 0.8;
+    max-height: 1080px;
+    height: 90vh;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .section-content-wrapper {
+    display: flex;
+    flex: 1;
+    padding-left: 100px;
+    @include center-x;
+    justify-content: flex-start;
+
+    .content-block {
+      max-width: 660px;
+    }
+  }
+}
+
 // SECTION STYLES
 .home_about-section.section {
   padding: 0;
@@ -89,6 +119,11 @@
 
 .section-main-01 .section-card {
   padding: 70px 40px 40px;
+  align-items: center;
+}
+
+.section-main-02 .col {
+  align-items: center;
 }
 
 .ic-3-3 {
@@ -103,4 +138,23 @@
 
 .section-main-03 .section-grid--3-col .section-card-block {
   grid-column: span 2;
+}
+
+.section-main-04 .section-image-block {
+  border-radius: 0 60px 60px 0;
+  overflow: hidden;
+}
+
+.section-main-04 .section-heading-block {
+  gap: 30px;
+}
+
+.section-main-05 .content-block {
+  @include flex-row;
+  @include center-x;
+  justify-content: space-between;
+
+  .button {
+    margin: unset;
+  }
 }

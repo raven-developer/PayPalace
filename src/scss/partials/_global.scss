@@ -63,12 +63,9 @@ p {
 }
 
 // FLEXBOX
-.flex {
-  display: flex;
-}
-
 .col {
   @include flex-settings(column);
+  align-items: start;
 }
 
 .col-rev {
