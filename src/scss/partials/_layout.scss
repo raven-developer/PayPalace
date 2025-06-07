@@ -6,7 +6,18 @@
 .section-wrapper {
   max-width: 1344px;
   margin: 0 auto;
-  padding: 0 16px;
+
+  @media screen and (min-width: 1281px) {
+    padding: 0;
+  }
+
+  @media screen and (max-width: 1280px) and (min-width: 1025px) {
+    padding: 0 40px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 0 20px;
+  }
 }
 
 .section {
@@ -76,6 +87,8 @@
   .hero-text-block {
     @include center-x;
     justify-content: space-between;
+    width: 100%;
+    @include flex-row-reverse;
   }
 
   .hero-image-block {
@@ -85,6 +98,11 @@
     overflow: hidden;
     border-radius: $round-60;
     @include flex-center;
+  }
+
+  .par-sub {
+    text-align: right;
+    width: 90%;
   }
 }
 
@@ -100,8 +118,8 @@
 
 .home_about {
   &--img-1 {
-    width: calc(100% - 192px);
-    height: calc(100% - 61px);
+    width: calc(100% - 30%);
+    height: calc(100% - 15%);
     border-radius: $round-20;
     overflow: hidden;
     position: absolute;
@@ -110,8 +128,8 @@
     z-index: 1;
   }
   &--img-2 {
-    width: calc(100% - 192px);
-    height: calc(100% - 61px);
+    width: calc(100% - 30%);
+    height: calc(100% - 12%);
     border-radius: $round-20;
     overflow: hidden;
     position: absolute;
@@ -122,6 +140,7 @@
 }
 
 .section-main-01 .section-card {
+  @include flex-column;
   padding: 70px 40px 40px;
   align-items: center;
 }
