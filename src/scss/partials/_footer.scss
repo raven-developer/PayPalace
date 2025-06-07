@@ -10,9 +10,6 @@ footer {
   }
   .upper-footer {
     @include flex-row;
-  }
-
-  .upper-footer {
     gap: 120px;
   }
 
@@ -67,5 +64,23 @@ footer {
 .foot-link-wrappper {
   .foot-link-item {
     padding: 7px 0;
+  }
+}
+
+// RESPONSIVE
+@media screen and (max-width: 992px) {
+  footer {
+    .upper-footer {
+      @include flex-column;
+      gap: 80px;
+    }
+  }
+
+  .footer-info {
+    padding-left: 0;
+    .social-links,
+    .sitemap {
+      flex: 1;
+    }
   }
 }

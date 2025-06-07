@@ -4,16 +4,9 @@
 
 // GENERAL LAYOUT STYLES
 .section-wrapper {
-  max-width: 1344px;
+  max-width: 1392px;
   margin: 0 auto;
-
-  @media screen and (min-width: 1281px) {
-    padding: 0;
-  }
-
-  @media screen and (max-width: 1280px) and (min-width: 1025px) {
-    padding: 0 40px;
-  }
+  padding: 0 40px;
 
   @media screen and (max-width: 1024px) {
     padding: 0 20px;
@@ -107,8 +100,12 @@
 }
 
 .w-home_about-container {
+  .section-content-block {
+    @include flex-row-reverse;
+  }
   .section-image-block {
     flex: 0.8;
+    min-height: 489px;
 
     img {
       object-fit: cover;
