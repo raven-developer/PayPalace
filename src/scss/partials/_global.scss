@@ -19,7 +19,8 @@
   letter-spacing: -2px;
 }
 
-h4 {
+h4,
+.blog-title {
   @include font(600, 1.875rem, none);
 }
 
@@ -43,12 +44,14 @@ span {
   @include font(normal, 1.75rem, none);
 }
 
-p {
+.input-field,
+.par-sm,
+.par-reg {
   color: $black-90;
 }
+.input-field,
 .par-sm {
   @include font(normal, 1.0625rem, none);
-  color: $black-90;
 }
 
 .center-text {

@@ -9,6 +9,8 @@
   border-radius: 50px;
   transition: transform 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
   text-align: center;
+  cursor: pointer;
+  color: $blue-70;
 
   &--is_primary {
     background-color: $blue-70;
@@ -34,10 +36,20 @@
 
     &:hover {
       background-color: $blue-90;
+      border-color: $blue-90;
       transform: rotate(4deg);
       .button-span {
         color: $white;
       }
+    }
+  }
+
+  &--is_blog {
+    padding: 0;
+
+    .button-span {
+      font-size: 1.0625rem;
+      color: $blue-70;
     }
   }
 }
@@ -66,15 +78,31 @@
       gap: 80px;
     }
   }
+
+  &--color {
+    padding: 80px 40px;
+    background-color: $blue-90;
+
+    .section-heading-block {
+      @include center-x;
+    }
+
+    .section-heading {
+      color: $white;
+    }
+
+    .button--is_primary:hover {
+      background-color: $white;
+
+      .button-span {
+        color: $blue-90;
+      }
+    }
+  }
 }
 
 .section-grid {
   display: grid;
-
-  &--2-col {
-  }
-  &--3-col {
-  }
 }
 
 // CARD STYLES
@@ -141,6 +169,41 @@
   }
 }
 
+.img-card {
+  &--blog-variant {
+    .card-img-block {
+      border-radius: $round-20;
+      overflow: hidden;
+    }
+    .blog-ftd-image {
+      max-width: 100%;
+      width: 100%;
+      aspect-ratio: 0.889;
+      margin-bottom: 25px;
+
+      img {
+        object-fit: cover;
+      }
+    }
+
+    .blog-date {
+      margin-bottom: 12px;
+      opacity: 0.6;
+    }
+
+    .card-content-block {
+      @include flex-column;
+      gap: $round-15;
+    }
+
+    .bottom-content {
+      @include flex-row;
+      @include center-x;
+      justify-content: space-between;
+    }
+  }
+}
+
 // LOGO CAROUSEL STYLES
 .logo-carousel-block {
   width: 100%;
@@ -167,4 +230,43 @@
   background-color: $blue-90;
   width: 100%;
   opacity: 0.3;
+}
+
+// INPUT FIELD
+input,
+.input-field {
+  padding: 20px 36px;
+  width: 100%;
+  background-color: $white;
+  border-radius: 50px / 50px;
+  outline: 1px solid transparent;
+  transition: all 150ms ease-in-out;
+
+  &:focus {
+    outline-color: $blue-90;
+  }
+
+  &:valid {
+    outline-color: $blue-90;
+  }
+
+  &:invalid {
+    outline-color: $red;
+  }
+
+  &:not(&:focus) {
+    outline-color: transparent;
+  }
+
+  // AUTO FILLS
+  &:-webkit-autofill {
+    -webkit-text-fill-color: $blue-90;
+    -webkit-box-shadow: 0 0 0 1000px $white inset;
+    background-color: $white;
+  }
+
+  &:-moz-autofill {
+    box-shadow: 0 0 0 1000px $white inset;
+    -moz-text-fill-color: $blue-90;
+  }
 }

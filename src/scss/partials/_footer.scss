@@ -1,3 +1,64 @@
 // Footer styles
 @use 'mixins' as *;
 @use 'var' as *;
+
+footer {
+  padding: 70px 0 0 0;
+  .section-heading {
+    font-size: 1.875rem;
+    letter-spacing: -1px;
+  }
+  .upper-footer {
+    @include flex-row;
+  }
+
+  .upper-footer {
+    gap: 120px;
+  }
+
+  .newsletter {
+    align-items: stretch;
+  }
+  .section-heading {
+    margin-bottom: 30px;
+  }
+}
+
+.foooter-wrapper {
+  @include flex-column;
+}
+
+.foooter-wrapper form {
+  @include flex-row;
+  gap: 20px;
+}
+
+.newsletter {
+  flex: 1.5;
+  form {
+    margin-bottom: 15px;
+  }
+  .par-sm {
+    width: calc(100% - 191px);
+  }
+}
+
+.footer-info {
+  @include flex-row;
+  justify-content: space-between;
+  flex: 1;
+  padding-left: 80px;
+}
+
+.bottom-footer {
+  @include flex-row;
+  justify-content: space-between;
+  margin-top: 130px;
+}
+
+.footer-logo-container {
+  max-width: 100%;
+  width: 100%;
+  margin: 40px auto 72px;
+  overflow-wrap: break-word;
+}
