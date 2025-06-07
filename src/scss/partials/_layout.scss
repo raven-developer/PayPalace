@@ -29,7 +29,7 @@
 }
 
 .is_sticky {
-  @media screen and (min-width: 1025px) {
+  @media screen and (min-width: 769px) {
     position: sticky;
     top: calc(84px + 40px); // ANav height + padding
   }

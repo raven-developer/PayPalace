@@ -62,3 +62,10 @@ footer {
   margin: 40px auto 72px;
   overflow-wrap: break-word;
 }
+
+.social-link-wrappper,
+.foot-link-wrappper {
+  .foot-link-item {
+    padding: 7px 0;
+  }
+}
