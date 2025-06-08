@@ -64,6 +64,27 @@
 
 // Mobile Screens
 @media screen and (max-width: 552px) {
+  .hero-section {
+    .hero-text-block {
+      flex-direction: column;
+      align-items: start;
+    }
+
+    .hero-image-block {
+      aspect-ratio: 1;
+      img {
+        object-fit: cover;
+      }
+    }
+
+    .par-sub {
+      text-align: left;
+    }
+
+    .button {
+      margin-top: 25px;
+    }
+  }
 }
 
 // Smaller Screens General
@@ -83,6 +104,7 @@
   .w-home_about-container {
     .section-content-block {
       @include flex-column;
+      width: 100%;
     }
     .section-image-block {
       width: 100%;
@@ -119,6 +141,12 @@
     }
 
     .gap-80 {
+      gap: 40px;
+    }
+  }
+
+  .section-main-01 {
+    .gap-70 {
       gap: 40px;
     }
   }

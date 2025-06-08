@@ -115,8 +115,13 @@
 
     .card-icon {
       width: 72px;
-      height: 72px;
+      aspect-ratio: 1;
       margin-bottom: 20px;
+
+      @media screen and (max-width: 552px) {
+        width: 60px;
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -221,6 +226,10 @@
   .logo-carousel-item {
     height: 44px;
     flex: 0 0 auto;
+
+    @media screen and (max-width: 768px) {
+      height: 38px;
+    }
   }
 }
 

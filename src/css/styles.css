@@ -377,8 +377,14 @@ div {
 }
 .icon-card--variant-1 .card-icon {
   width: 72px;
-  height: 72px;
+  aspect-ratio: 1;
   margin-bottom: 20px;
+}
+@media screen and (max-width: 552px) {
+  .icon-card--variant-1 .card-icon {
+    width: 60px;
+    margin-bottom: 0;
+  }
 }
 .icon-card--variant-2 {
   background-color: #ffffff;
@@ -469,6 +475,11 @@ div {
   height: 44px;
   flex: 0 0 auto;
 }
+@media screen and (max-width: 768px) {
+  .logo-carousel-block .logo-carousel-item {
+    height: 38px;
+  }
+}
 
 .hr {
   height: 1px;
@@ -532,7 +543,7 @@ input:-moz-autofill,
 }
 @media screen and (max-width: 552px) {
   .hero-heading {
-    font-size: 3rem;
+    font-size: 2.9rem;
   }
 }
 
@@ -783,6 +794,11 @@ footer .section-heading {
   flex-direction: row;
   gap: 20px;
 }
+@media screen and (max-width: 552px) {
+  .foooter-wrapper form {
+    flex-direction: column;
+  }
+}
 
 .newsletter {
   flex: 1.5;
@@ -792,6 +808,11 @@ footer .section-heading {
 }
 .newsletter .par-sm {
   width: calc(100% - 191px);
+}
+@media screen and (max-width: 552px) {
+  .newsletter .par-sm {
+    width: 100%;
+  }
 }
 
 .footer-info {
@@ -806,7 +827,17 @@ footer .section-heading {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 130px;
+  margin-top: 120px;
+}
+@media screen and (max-width: 552px) {
+  .bottom-footer {
+    flex-direction: column;
+    margin-top: 80px;
+  }
+}
+.bottom-footer .copyright,
+.bottom-footer .privacy {
+  margin: 10px 0;
 }
 
 .footer-logo-container {
@@ -1075,6 +1106,24 @@ footer .section-heading {
     height: 88%;
   }
 }
+@media screen and (max-width: 552px) {
+  .hero-section .hero-text-block {
+    flex-direction: column;
+    align-items: start;
+  }
+  .hero-section .hero-image-block {
+    aspect-ratio: 1;
+  }
+  .hero-section .hero-image-block img {
+    object-fit: cover;
+  }
+  .hero-section .par-sub {
+    text-align: left;
+  }
+  .hero-section .button {
+    margin-top: 25px;
+  }
+}
 @media screen and (max-width: 1024px) {
   .icon-card--variant-2 .card-icon-block {
     width: 80px;
@@ -1086,6 +1135,7 @@ footer .section-heading {
   .w-home_about-container .section-content-block {
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
   .w-home_about-container .section-image-block {
     width: 100%;
@@ -1112,6 +1162,9 @@ footer .section-heading {
     padding: 40px 20px 0;
   }
   .fwidth-wrapper .gap-80 {
+    gap: 40px;
+  }
+  .section-main-01 .gap-70 {
     gap: 40px;
   }
 }
