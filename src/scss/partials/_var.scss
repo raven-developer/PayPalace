@@ -111,3 +111,12 @@ $by-5-values: (
     transform: translateX(-50%);
   }
 }
+
+@keyframes navbg-open {
+  0% {
+  }
+
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}

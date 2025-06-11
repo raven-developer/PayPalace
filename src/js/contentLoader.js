@@ -40,27 +40,25 @@ function forMobile() {
   const closeBtn = document.getElementById('menu-close');
   const navLinks = document.getElementById('nav-links');
   const navLogo = document.getElementById('nav-logo');
-  const navWrap = document.getElementById('nav-wrapper');
+  const navItems = document.querySelector('.nav-link-wrapper');
   const header = document.querySelector('header .section-wrapper');
 
   function openMenu() {
-    if (header) header.classList.add('enable');
-    navLogo.classList.add('white-filter');
-    openBtn.classList.add('hide');
-    closeBtn.classList.remove('hide');
-    navLinks.classList.remove('hide');
-    navLinks.classList.add('dark');
     document.body.classList.add('no-scroll');
+    navLinks.classList.add('is_open');
+    openBtn.style.display = 'none';
+    closeBtn.style.display = '';
+    navLogo.classList.add('white-filter');
+    navItems.classList.add('open');
   }
 
   function closeMenu() {
-    if (header) header.classList.remove('enable');
-    navLogo.classList.remove('white-filter');
-    openBtn.classList.remove('hide');
-    closeBtn.classList.add('hide');
-    navLinks.classList.add('hide');
-    navLinks.classList.remove('dark');
     document.body.classList.remove('no-scroll');
+    navLinks.classList.remove('is_open');
+    openBtn.style.display = '';
+    closeBtn.style.display = 'none';
+    navLogo.classList.remove('white-filter');
+    navItems.classList.remove('open');
   }
 
   closeMenu();

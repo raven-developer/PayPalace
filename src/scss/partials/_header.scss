@@ -4,6 +4,7 @@
 
 .nav-wrapper {
   justify-content: space-between;
+  align-items: center;
   padding-block: 30px;
 
   .menu-icon {
@@ -13,17 +14,23 @@
     height: 100%;
   }
 
-  .site-logo {
+  .nav-logo-block {
     max-width: 200px;
     height: 44px;
     vertical-align: middle;
+    transition: 500ms ease-in-out;
+
+    @media (max-width: 552px) {
+      height: 36px;
+    }
   }
 }
 
 .nav-link-container {
   @include center-y;
 }
-.nav-link-wrappper {
+
+.nav-link-wrapper {
   .nav-link-item {
     padding: 7px 0;
   }
@@ -41,6 +48,7 @@
   .menu-icon {
     z-index: 10;
   }
+
   .nav-link-container {
     display: flex;
     padding: 20px;
@@ -50,33 +58,46 @@
     top: 0;
     left: 0;
     z-index: 5;
+    background-color: $blue-90;
+    clip-path: inset(0 0 0 100%);
+    transition: clip-path 0.7s cubic-bezier(0.35, 0, 0.175, 1);
+  }
+
+  .is_open {
+    clip-path: inset(0 0 0 0);
   }
 
   .nav-close-block {
     background-color: $white;
-    border-radius: 50% / 50%;
+    border-radius: 50%;
     padding: 10px;
+
     img {
       filter: invert(40%) sepia(72%) saturate(7354%) hue-rotate(214deg) brightness(97%) contrast(113%);
     }
   }
 
-  .nav-link-wrappper {
+  .nav-link-wrapper {
+    transform: translateX(130%);
+    transition: transform 500ms ease;
+
     &.row {
       flex-direction: column;
-      align-items: start;
+      align-items: flex-start;
 
       &.gap-40 {
         gap: 20px;
       }
     }
+
     .nav-link-item {
       font-size: 2.25rem;
       padding: 0;
     }
+
     .par-sm {
       color: $white;
-      text-decoration-color: #fff !important;
+      text-decoration-color: $white !important;
     }
   }
 
@@ -86,18 +107,16 @@
   }
 
   .white-filter {
+    transition-delay: 350ms;
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(170deg) brightness(107%) contrast(101%);
   }
 
   .open {
-    display: flex;
+    transform: translateX(0);
+    transition-delay: 150ms;
   }
 
-  .hide {
+  .hidden {
     display: none;
-  }
-
-  .dark {
-    background-color: $blue-90;
   }
 }
