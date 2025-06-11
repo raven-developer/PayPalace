@@ -89,11 +89,15 @@
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(170deg) brightness(107%) contrast(101%);
   }
 
-  .is_open {
+  .open {
     display: flex;
   }
 
-  .is_close {
+  .hide {
     display: none;
+  }
+
+  .dark {
+    background-color: $blue-90;
   }
 }

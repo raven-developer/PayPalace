@@ -41,9 +41,34 @@ function forMobile() {
   const navLinks = document.getElementById('nav-links');
   const navLogo = document.getElementById('nav-logo');
   const navWrap = document.getElementById('nav-wrapper');
+  const header = document.querySelector('header .section-wrapper');
+
+  function openMenu() {
+    if (header) header.classList.add('enable');
+    navLogo.classList.add('white-filter');
+    openBtn.classList.add('hide');
+    closeBtn.classList.remove('hide');
+    navLinks.classList.remove('hide');
+    navLinks.classList.add('dark');
+    document.body.classList.add('no-scroll');
+  }
+
+  function closeMenu() {
+    if (header) header.classList.remove('enable');
+    navLogo.classList.remove('white-filter');
+    openBtn.classList.remove('hide');
+    closeBtn.classList.add('hide');
+    navLinks.classList.add('hide');
+    navLinks.classList.remove('dark');
+    document.body.classList.remove('no-scroll');
+  }
+
+  closeMenu();
 
   openBtn.addEventListener('click', () => {
-    navWrap.style.outline = '1px solid red';
+    openMenu();
   });
-  closeBtn.addEventListener('click', () => {});
+  closeBtn.addEventListener('click', () => {
+    closeMenu();
+  });
 }

@@ -17,3 +17,8 @@ html,
 body {
   background-color: $blue-10;
 }
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
