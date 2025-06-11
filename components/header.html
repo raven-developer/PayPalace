@@ -1,30 +1,27 @@
 <div class="section-wrapper">
-  <div class="nav-wrapper row">
-    <div class="nav-logo-block">
+  <div class="nav-wrapper row" id="nav-wrapper">
+    <!-- Logo -->
+    <div class="nav-logo-block" id="nav-logo">
       <img src="../assets/paypalace-logo-dark.svg" alt="PayPalace Logo on Dark" class="nav-logo site-logo" />
     </div>
 
-    <div class="menu-icon nav-open-block" id="" onclick="toggleMenu()">
-      <img src="../assets/icons/Menu.svg" alt="Menu Button" class="icon" id="nav-open" />
+    <!-- Menu Open Icon -->
+    <div class="menu-icon nav-open-block" id="menu-open">
+      <img src="../assets/icons/Menu.svg" alt="Menu Button" class="icon" />
     </div>
 
-    <nav class="nav-link-container col gap-40 enable" id="" aria-label="">
-      <div class="menu-icon nav-close-block" id="cross">
-        <img src="../assets/icons/Close.svg" alt="Close Menu Button" class="icon" id="nav-close" />
-      </div>
+    <!-- Menu Close Icon -->
+    <div class="menu-icon nav-close-block is_close" id="menu-close">
+      <img src="../assets/icons/Close.svg" alt="Close Menu Button" class="icon" />
+    </div>
+
+    <!-- Navigation Links -->
+    <nav class="nav-link-container col gap-40 is_close" id="nav-links" aria-label="Main navigation">
       <ul class="nav-link-wrappper row gap-40">
-        <li class="nav-link-item par-sm">
-          <a href="" class="" id="" data-page="home">Home</a>
-        </li>
-        <li class="nav-link-item par-sm">
-          <a href="" class="" id="" data-page="about">About</a>
-        </li>
-        <li class="nav-link-item par-sm">
-          <a href="" class="" id="" data-page="stories">Stories</a>
-        </li>
-        <li class="nav-link-item par-sm">
-          <a href="" class="" id="" data-page="contact">Contact</a>
-        </li>
+        <li class="nav-link-item par-sm"><a href="" data-page="home">Home</a></li>
+        <li class="nav-link-item par-sm"><a href="" data-page="about">About</a></li>
+        <li class="nav-link-item par-sm"><a href="" data-page="stories">Stories</a></li>
+        <li class="nav-link-item par-sm"><a href="" data-page="contact">Contact</a></li>
       </ul>
     </nav>
   </div>
