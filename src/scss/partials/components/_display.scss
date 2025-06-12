@@ -1,0 +1,76 @@
+// FLEX MIXINS
+@mixin flex-settings($flex-direction) {
+  display: flex;
+  flex-direction: $flex-direction;
+}
+
+@mixin flex-column {
+  @include flex-settings(column);
+}
+
+@mixin flex-column-reverse {
+  @include flex-settings(column-reverse);
+}
+
+@mixin flex-row {
+  @include flex-settings(row);
+}
+
+@mixin flex-row-reverse {
+  @include flex-settings(row-reverse);
+}
+
+@mixin center-x {
+  align-items: center;
+}
+
+@mixin center-y {
+  justify-content: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  place-content: center;
+}
+
+// FLEX CLASSES
+.col {
+  @include flex-settings(column);
+  align-items: start;
+}
+
+.col-rev {
+  @include flex-settings(column-reverse);
+}
+
+.row {
+  @include flex-settings(row);
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.row-rev {
+  @include flex-settings(row-reverse);
+}
+
+.is_x-centered {
+  @include center-x;
+}
+
+.is_y-centered {
+  @include center-y;
+}
+
+.section-image-block,
+.section-text-block {
+  flex: 1;
+}
+
+// GRID MIXIN
+@mixin grid-col($column) {
+  display: grid;
+  grid-template-columns: repeat($column, 1fr);
+}
+
+// GRID

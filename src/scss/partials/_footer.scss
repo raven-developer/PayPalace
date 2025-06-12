@@ -1,6 +1,7 @@
 // Footer styles
 @use 'mixins' as *;
 @use 'var' as *;
+@use 'components/display' as *;
 
 footer {
   padding: 70px 0 0 0;

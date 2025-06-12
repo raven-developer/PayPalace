@@ -1,0 +1,56 @@
+// Buttons, cards, modals, etc.
+@use '../mixins' as *;
+@use '../var' as *;
+@use 'display' as *;
+
+// BUTTON STYLES
+.button {
+  display: inline-block;
+  padding: 20px 36px;
+  border-radius: 50px;
+  transition: transform 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  text-align: center;
+  cursor: pointer;
+  color: $blue-70;
+
+  &--is_primary {
+    background-color: $blue-70;
+
+    .button-span {
+      color: $white;
+      white-space: nowrap;
+    }
+
+    &:hover {
+      background-color: $blue-90;
+      transform: rotate(4deg);
+    }
+  }
+
+  &--is_ghost {
+    border: 1px solid $blue-70;
+
+    .button-span {
+      color: $blue-70;
+      white-space: nowrap;
+    }
+
+    &:hover {
+      background-color: $blue-90;
+      border-color: $blue-90;
+      transform: rotate(4deg);
+      .button-span {
+        color: $white;
+      }
+    }
+  }
+
+  &--is_blog {
+    padding: 0;
+
+    .button-span {
+      font-size: 1.0625rem;
+      color: $blue-70;
+    }
+  }
+}

@@ -1,0 +1,112 @@
+// Buttons, cards, modals, etc.
+@use '../mixins' as *;
+@use '../var' as *;
+@use 'display' as *;
+
+// SECTION STYLES
+
+.hero-section {
+  .hero-text-block {
+    @include center-x;
+    justify-content: space-between;
+    width: 100%;
+    @include flex-row-reverse;
+  }
+
+  .hero-image-block {
+    max-height: 75vh;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: $round-60;
+    @include flex-center;
+  }
+
+  .par-sub {
+    text-align: right;
+    width: 90%;
+  }
+}
+
+.section-card {
+  border-radius: $round-60;
+  padding: 70px 40px;
+  &--white {
+    background-color: $white;
+  }
+
+  &--image {
+    max-height: 780px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    flex-wrap: wrap;
+    @include flex-center;
+
+    .section-heading-block {
+      background-color: $white;
+      padding: 50px 40px;
+      border-radius: $round-20;
+      max-width: 482px;
+      gap: 80px;
+    }
+  }
+
+  &--color {
+    padding: 80px 40px;
+    background-color: $blue-90;
+
+    .section-heading-block {
+      @include center-x;
+    }
+
+    .section-heading {
+      color: $white;
+    }
+
+    .button--is_primary:hover {
+      background-color: $white;
+
+      .button-span {
+        color: $blue-90;
+      }
+    }
+  }
+}
+
+.section-grid {
+  display: grid;
+}
+
+.fwidth-wrapper {
+  @include flex-row;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px 0 0;
+
+  .section-image-block {
+    flex: 0.8;
+    max-height: 1080px;
+    height: 90vh;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .section-content-wrapper {
+    display: flex;
+    flex: 1;
+    padding-left: 100px;
+    @include center-x;
+    justify-content: flex-start;
+
+    .content-block {
+      max-width: 660px;
+      @media (max-width: 1024px) {
+        max-width: 100%;
+      }
+    }
+  }
+}

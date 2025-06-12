@@ -1,0 +1,43 @@
+// Buttons, cards, modals, etc.
+@use '../mixins' as *;
+@use '../var' as *;
+@use 'display' as *;
+
+// INPUT FIELD
+input,
+.input-field {
+  padding: 20px 36px;
+  width: 100%;
+  background-color: $white;
+  border-radius: 50px / 50px;
+  outline: 1px solid transparent;
+  transition: all 150ms ease-in-out;
+
+  &:focus {
+    outline-color: $blue-90;
+  }
+
+  &:valid {
+    outline-color: $blue-90;
+  }
+
+  &:invalid {
+    outline-color: $red;
+  }
+
+  &:not(&:focus) {
+    outline-color: transparent;
+  }
+
+  // AUTO FILLS
+  &:-webkit-autofill {
+    -webkit-text-fill-color: $blue-90;
+    -webkit-box-shadow: 0 0 0 1000px $white inset;
+    background-color: $white;
+  }
+
+  &:-moz-autofill {
+    box-shadow: 0 0 0 1000px $white inset;
+    -moz-text-fill-color: $blue-90;
+  }
+}

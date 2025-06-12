@@ -27,3 +27,11 @@ body {
   overflow: hidden;
   width: 100%;
 }
+
+.is_sticky {
+  position: sticky;
+  top: calc(84px + 40px);
+  @include screen-768 {
+    position: unset;
+  }
+}

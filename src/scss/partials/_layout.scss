@@ -1,6 +1,7 @@
 // ALL ADJUSTMENTS TO THE GLOBAL LAYOUT OF THE SITE
 @use 'mixins' as *;
 @use 'var' as *;
+@use 'components/display' as *;
 
 // GENERAL LAYOUT STYLES
 .section-wrapper {
@@ -8,24 +9,21 @@
   margin: 0 auto;
   padding: 0 40px;
 
-  @media screen and (max-width: 1024px) {
+  @include screen-1024 {
     padding: 0 20px;
   }
 }
 
 .section {
   padding: 70px 0;
+
+  @include screen-1024 {
+    padding: 50px 0;
+  }
 }
 
 .content-block {
   max-height: max-content;
-}
-
-.is_sticky {
-  @media screen and (min-width: 769px) {
-    position: sticky;
-    top: calc(84px + 40px); // ANav height + padding
-  }
 }
 
 .section-heading-block {
@@ -38,38 +36,6 @@
   }
 }
 
-.fwidth-wrapper {
-  max-width: 1920px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 16px 0 0;
-
-  .section-image-block {
-    flex: 0.8;
-    max-height: 1080px;
-    height: 90vh;
-
-    img {
-      object-fit: cover;
-    }
-  }
-
-  .section-content-wrapper {
-    display: flex;
-    flex: 1;
-    padding-left: 100px;
-    @include center-x;
-    justify-content: flex-start;
-
-    .content-block {
-      max-width: 660px;
-      @media (max-width: 1024px) {
-        max-width: 100%;
-      }
-    }
-  }
-}
-
 .content-wrapper:not(.content-wrapper.section-grid, .content-wrapper.section-card) {
   @include flex-column;
 }
@@ -77,29 +43,6 @@
 // SECTION STYLES
 .home_about-section.section {
   padding: 0;
-}
-
-.hero-section {
-  .hero-text-block {
-    @include center-x;
-    justify-content: space-between;
-    width: 100%;
-    @include flex-row-reverse;
-  }
-
-  .hero-image-block {
-    max-height: 75vh;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    border-radius: $round-60;
-    @include flex-center;
-  }
-
-  .par-sub {
-    text-align: right;
-    width: 90%;
-  }
 }
 
 .w-home_about-container {
@@ -143,7 +86,7 @@
   @include flex-column;
   padding: 70px 40px 40px;
   align-items: center;
-  @media (max-width: 768px) {
+  @include screen-768 {
     padding: 50px 20px 20px;
   }
 }
@@ -153,8 +96,9 @@
 }
 
 .ic-3-3 {
-  @media screen and (min-width: 1025px) {
-    margin-top: 80px;
+  margin-top: 80px;
+  @include screen-552 {
+    margin-top: 0;
   }
 }
 
