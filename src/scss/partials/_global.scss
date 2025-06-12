@@ -3,13 +3,16 @@
 
 .hero-heading {
   // H1
-  @include font(600, 4.5rem, none);
+  @include font(600, 5rem, none);
   letter-spacing: -2px;
   @media screen and (max-width: 1024px) and (min-width: 553px) {
     font-size: 3.75rem;
   }
   @media screen and (max-width: 552px) {
     font-size: 3.4rem;
+  }
+  @media screen and (max-width: 320px) {
+    font-size: 2.5rem;
   }
 }
 
@@ -22,6 +25,9 @@
   }
   @media screen and (max-width: 552px) {
     font-size: 2.25rem;
+  }
+  @media screen and (max-width: 320px) {
+    font-size: 2rem;
   }
 }
 

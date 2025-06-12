@@ -60,35 +60,27 @@
       }
     }
   }
-}
 
-// Mobile Screens
-@media screen and (max-width: 552px) {
-  .hero-section {
-    .hero-text-block {
-      flex-direction: column;
-      align-items: start;
+  .section-wrapper.w-cta-container {
+    //padding: 0;
+
+    .section-card--image {
+      justify-content: flex-end;
     }
-
-    .hero-image-block {
-      aspect-ratio: 1;
-      img {
-        object-fit: cover;
-      }
-    }
-
-    .par-sub {
-      text-align: left;
-    }
-
-    .button {
-      margin-top: 25px;
+    .section-heading-block {
+      gap: 40px;
     }
   }
 }
 
 // Smaller Screens General
 @media screen and (max-width: 1024px) {
+  .hero-section.section {
+    padding-top: 30px;
+  }
+  .section-heading-block {
+    width: 100%;
+  }
   .icon-card {
     &--variant-2 {
       .card-icon-block {
@@ -117,27 +109,18 @@
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .section-wrapper.w-cta-container {
-    //padding: 0;
-
-    .section-card--image {
-      justify-content: flex-end;
-    }
-    .section-heading-block {
-      gap: 40px;
-    }
-  }
-
   .fwidth-wrapper {
-    padding: 0;
+    padding: 0 20px;
     flex-direction: column;
 
     .section-image-block {
       border-radius: 60px;
+      width: 100%;
+      aspect-ratio: 4 / 3;
     }
 
     .section-content-wrapper {
-      padding: 40px 20px 0;
+      padding: 40px 0;
     }
 
     .gap-80 {
@@ -150,10 +133,98 @@
       gap: 40px;
     }
   }
+
+  .w-home_about-container .section-image-block {
+    min-height: 200px;
+    aspect-ratio: 2 / 2.5;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .recent_stories .grid-content .is_card:nth-of-type(n + 5) {
     display: none;
+  }
+}
+
+// Mobile Screens
+@media screen and (max-width: 552px) {
+  .hero-section {
+    .hero-text-block {
+      flex-direction: column;
+      align-items: start;
+    }
+
+    .hero-image-block {
+      aspect-ratio: 1;
+      img {
+        object-fit: cover;
+      }
+    }
+
+    .par-sub {
+      text-align: left;
+    }
+
+    .button {
+      margin-top: 25px;
+    }
+  }
+
+  .icon-card {
+    &--variant-2 {
+      padding: 20px 20px 30px;
+      .card-label-block {
+        flex-direction: column-reverse;
+        align-items: start;
+        gap: 30px;
+      }
+
+      .card-label {
+        width: 100%;
+      }
+    }
+  }
+
+  .text-card {
+    &--variant-1 {
+      padding: 30px;
+    }
+  }
+
+  .section-card {
+    &--color {
+      padding: 50px 30px;
+
+      .button {
+        width: 100%;
+      }
+    }
+
+    &--image {
+      justify-content: center;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #0f1e3b87;
+      }
+
+      .section-heading-block {
+        background-color: transparent;
+        padding: 0;
+        gap: 40px;
+        .section-heading {
+          color: $white;
+          text-align: center;
+        }
+
+        .button {
+          width: 100%;
+        }
+      }
+    }
   }
 }
