@@ -1,7 +1,5 @@
 // ALL ADJUSTMENTS TO THE GLOBAL LAYOUT OF THE SITE
-@use 'mixins' as *;
-@use 'var' as *;
-@use 'components/display' as *;
+@use 'styles/style-hub' as *;
 
 // GENERAL LAYOUT STYLES
 .section-wrapper {
@@ -86,7 +84,7 @@
   @include flex-column;
   padding: 70px 40px 40px;
   align-items: center;
-  @include screen-768 {
+  @include screen-552 {
     padding: 50px 20px 20px;
   }
 }

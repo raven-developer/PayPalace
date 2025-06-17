@@ -1,16 +1,16 @@
-// Reset Style
+// RESET
 @use 'partials/reset';
-// Variables and Components
-@use 'partials/var' as *;
-@use 'partials/mixins' as *;
-@use 'partials/comp';
+
+// STYLES
+@use 'partials/styles/style-hub' as *;
+@use 'partials/font';
 @use 'partials/global';
-// Header and Footer
+
+// LAYOUTS
+@use 'partials/comp';
 @use 'partials/footer';
 @use 'partials/header';
-// Layout
 @use 'partials/layout';
-// Responsive Design
 @use 'partials/resp';
 
 html,

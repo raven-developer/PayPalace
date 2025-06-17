@@ -1,13 +1,6 @@
-// Buttons, cards, modals, etc.
-@use 'mixins' as *;
-@use 'var' as *;
-@use 'components/display' as *;
+@use 'styles/style-hub' as *;
 
-// IMPORT FILES
-@use 'components/buttons';
-@use 'components/section';
-@use 'components/cards';
-@use 'components/form';
+@use 'components/comp-hub';
 
 // LOGO CAROUSEL STYLES
 .logo-carousel-block {

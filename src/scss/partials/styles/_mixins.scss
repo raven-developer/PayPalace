@@ -1,0 +1,86 @@
+// Reusable mixins
+@mixin font($weight, $size: 16px, $transform: none) {
+  font-family: 'Syne';
+  font-weight: $weight;
+  font-size: $size;
+  font-optical-sizing: auto;
+  text-transform: $transform;
+  text-decoration: none;
+}
+
+@mixin screen-1440 {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin screen-1024 {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin screen-992 {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin screen-768 {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin screen-552 {
+  @media (max-width: 552px) {
+    @content;
+  }
+}
+
+@mixin screen-320 {
+  @media (max-width: 320px) {
+    @content;
+  }
+}
+
+// GRID MIXIN
+@mixin grid-col($column) {
+  display: grid;
+  grid-template-columns: repeat($column, 1fr);
+}
+
+// FLEX MIXINS
+@mixin flex-settings($flex-direction) {
+  display: flex;
+  flex-direction: $flex-direction;
+}
+
+@mixin flex-column {
+  @include flex-settings(column);
+}
+
+@mixin flex-column-reverse {
+  @include flex-settings(column-reverse);
+}
+
+@mixin flex-row {
+  @include flex-settings(row);
+}
+
+@mixin flex-row-reverse {
+  @include flex-settings(row-reverse);
+}
+
+@mixin center-x {
+  align-items: center;
+}
+
+@mixin center-y {
+  justify-content: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  place-content: center;
+}

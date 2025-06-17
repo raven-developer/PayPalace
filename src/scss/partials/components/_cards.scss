@@ -1,7 +1,4 @@
-// Buttons, cards, modals, etc.
-@use '../mixins' as *;
-@use '../var' as *;
-@use 'display' as *;
+@use '../styles/style-hub' as *;
 
 // CARD STYLES
 .icon-card {
@@ -50,6 +47,10 @@
     .card-icon-block {
       max-width: 144px;
       max-height: 144px;
+      @include screen-768 {
+        width: 80px;
+        aspect-ratio: 1;
+      }
     }
   }
 }

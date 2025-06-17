@@ -1,7 +1,5 @@
+@use 'styles/style-hub' as *;
 // Header/nav styles
-@use 'mixins' as *;
-@use 'var' as *;
-@use 'components/display' as *;
 
 header {
   transition: all 300ms ease;
