@@ -5,13 +5,14 @@
   @include font(600, 5rem, none);
   letter-spacing: -2px;
   @include screen-1024 {
-    font-size: 3.75rem;
+    font-size: 4.25rem;
   }
   @include screen-552 {
-    font-size: 3.4rem;
+    font-size: 3.25rem;
+    letter-spacing: -1.5px;
   }
   @include screen-320 {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
 }
 
@@ -101,6 +102,9 @@ span {
 
 .center-text {
   text-align: center;
+  @include screen-552 {
+    text-align: left;
+  }
 }
 
 .section-heading-block {

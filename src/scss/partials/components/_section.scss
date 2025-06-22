@@ -47,6 +47,33 @@
       max-width: 482px;
       gap: 80px;
     }
+
+    @include screen-552 {
+      justify-content: center;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #0f1e3b87;
+      }
+
+      .section-heading-block {
+        background-color: transparent;
+        padding: 0;
+        gap: 40px;
+        .section-heading {
+          color: $white;
+          text-align: center;
+        }
+
+        .button {
+          width: 100%;
+        }
+      }
+    }
   }
 
   &--color {
@@ -82,10 +109,30 @@
   margin: 0 auto;
   padding: 0 16px 0 0;
 
+  @include screen-768 {
+    padding: 0 20px;
+    flex-direction: column;
+  }
+
   .section-image-block {
     flex: 0.8;
     max-height: 1080px;
     height: 90vh;
+    border-radius: 0 60px 60px 0;
+    overflow: hidden;
+    @include screen-1024 {
+      flex: 1;
+    }
+
+    @include screen-768 {
+      border-radius: 60px;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+    }
+
+    @include screen-552 {
+      aspect-ratio: 2 / 2.5;
+    }
 
     img {
       object-fit: cover;
@@ -98,6 +145,12 @@
     padding-left: 100px;
     @include center-x;
     justify-content: flex-start;
+    @include screen-1024 {
+      padding-left: 30px;
+    }
+    @include screen-768 {
+      padding: 40px 0;
+    }
 
     .content-block {
       max-width: 660px;

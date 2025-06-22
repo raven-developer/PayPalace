@@ -1,9 +1,9 @@
 // RESET
+@use 'partials/font';
 @use 'partials/reset';
 
 // STYLES
 @use 'partials/styles/style-hub' as *;
-@use 'partials/font';
 @use 'partials/global';
 
 // LAYOUTS
