@@ -7,10 +7,10 @@
 @use 'partials/global';
 
 // LAYOUTS
-@use 'partials/comp';
 @use 'partials/footer';
 @use 'partials/header';
 @use 'partials/layout';
+@use 'partials/comp';
 @use 'partials/resp';
 
 html,

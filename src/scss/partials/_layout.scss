@@ -22,6 +22,7 @@
 
 .content-block {
   max-height: max-content;
+  flex: 1;
 }
 
 .section-heading-block {
@@ -34,7 +35,8 @@
   }
 }
 
-.content-wrapper:not(.content-wrapper.section-grid, .content-wrapper.section-card) {
+.content-wrapper {
+  //.content-wrapper:not(.content-wrapper.section-grid, .content-wrapper.section-card) {
   @include flex-column;
 }
 

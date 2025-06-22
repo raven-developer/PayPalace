@@ -25,6 +25,31 @@
   }
 }
 
+.header-section {
+  .content-wrapper {
+    flex-direction: row;
+    gap: 30px;
+    @include screen-1024 {
+      flex-direction: column;
+    }
+  }
+
+  .section-heading-block {
+    flex: 0.7;
+  }
+
+  .section-image-block {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    border-radius: $round-60;
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+    }
+  }
+}
+
 .section-card {
   border-radius: $round-60;
   padding: 70px 40px;
