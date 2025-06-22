@@ -128,4 +128,20 @@
       justify-content: space-between;
     }
   }
+
+  &--team-variant {
+    border-radius: 30px;
+    overflow: hidden;
+    @include flex-column;
+
+    .card-img-block {
+      width: 100%;
+      aspect-ratio: 1;
+    }
+
+    .card-label-block {
+      background-color: $white;
+      padding: 40px 30px 30px;
+    }
+  }
 }

@@ -165,6 +165,10 @@ img {
   object-fit: contain;
 }
 
+main img {
+  object-fit: cover;
+}
+
 section,
 div {
   display: block;

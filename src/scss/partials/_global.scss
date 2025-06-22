@@ -43,6 +43,7 @@
   }
 }
 
+.mem-name,
 .blog-title {
   // H4
   @include font(600, 1.875rem, none);
@@ -58,13 +59,15 @@
 
 .par-reg,
 .button,
+.mem-pos,
 span {
   // H5
   @include font(normal, 1.4375rem, none);
+  letter-spacing: -1px;
   @include screen-1024 {
     font-size: 1.25rem;
   }
-  @include screen-552 {
+  @include screen-768 {
     font-size: 1.125rem;
   }
 }

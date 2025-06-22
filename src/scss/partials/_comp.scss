@@ -33,3 +33,26 @@
   width: 100%;
   opacity: 0.3;
 }
+
+.logo-collection {
+  margin-top: 40px;
+  .logo-wrapper {
+    .logo-item {
+      width: 100%;
+      background: $white;
+      border-radius: $round-15;
+      padding: 40px 30px;
+      @include flex-center;
+      img:not(.is_icon img) {
+        max-height: 44px;
+        object-position: center;
+        object-fit: contain;
+      }
+    }
+    .is_icon img {
+      max-height: 52px;
+      object-position: center;
+      object-fit: contain;
+    }
+  }
+}

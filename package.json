@@ -6,7 +6,6 @@
     "watch": "sass --watch src/scss/main.scss:src/css/styles.css --source-map",
     "compile": "sass src/scss/main.scss:src/css/styles.css --source-map --style=expanded",
     "build": "sass src/scss/main.scss:src/css/styles.css --no-source-map --style=compressed",
-    "clean": "rimraf src/css/*",
     "serve": "live-server src",
     "start": "npm run watch",
     "test": "echo \"Error: no test specified\" && exit 1"

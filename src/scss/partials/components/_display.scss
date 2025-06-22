@@ -77,5 +77,38 @@
   }
   &--3-col {
     @extend .grid-3-col;
+
+    .span-2 {
+      grid-column: span 2;
+      @include screen-1024 {
+        grid-column: unset;
+      }
+    }
+
+    @include screen-1024 {
+      @include grid-col(2);
+    }
+
+    @include screen-768 {
+      @include grid-col(1);
+    }
+
+    @include screen-1024 {
+      .grid-2-col {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    @include screen-768 {
+      .grid-2-col {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @include screen-552 {
+      .grid-2-col {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
   }
 }

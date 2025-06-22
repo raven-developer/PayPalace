@@ -35,9 +35,12 @@
   }
 }
 
-.content-wrapper {
-  //.content-wrapper:not(.content-wrapper.section-grid, .content-wrapper.section-card) {
+.content-wrapper-col {
   @include flex-column;
+}
+
+.content-wrapper-row {
+  @include flex-row;
 }
 
 // SECTION STYLES
@@ -106,10 +109,6 @@
   background: url('../../assets/resolven5\ 2.jpg') no-repeat center center/cover;
 }
 
-.section-main-03 .section-grid--3-col .section-card-block {
-  grid-column: span 2;
-}
-
 .section-main-04 .section-heading-block {
   gap: 30px;
 }
@@ -121,5 +120,48 @@
 
   .button {
     margin: unset;
+  }
+}
+
+#w-collab-section .content-block.section-heading-block {
+  flex: 0.6;
+}
+
+#w-about_values-section {
+  .content-wrapper-row {
+    align-items: center;
+  }
+  .section-text-block {
+    @include flex-column;
+    align-items: start;
+  }
+  .section-image-block {
+    aspect-ratio: 1.1;
+    img {
+      border-radius: $round-40;
+    }
+  }
+}
+
+.about_values {
+  &--img-1 {
+    width: calc(100% - 15%);
+    height: calc(100% - 10%);
+    border-radius: $round-20;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  &--img-2 {
+    width: calc(100% - 50%);
+    height: calc(100% - 30%);
+    border-radius: $round-20;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
   }
 }

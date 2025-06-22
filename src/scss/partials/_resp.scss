@@ -3,15 +3,12 @@
 // Media queries and responsive design
 
 @media screen and (max-width: 1024px) {
-  .section-main-03 {
-    .section-grid--3-col {
-      grid-template-columns: repeat(2, 1fr);
-      .section-card-block {
-        grid-column: unset;
-      }
+  .section-main-07 {
+    .content-wrapper-row {
+      flex-direction: column;
     }
-    .grid-2-col {
-      grid-template-columns: repeat(1, 1fr);
+    .gap-60 {
+      gap: 20px;
     }
   }
 }
@@ -51,18 +48,6 @@
     margin-top: 0;
   }
 
-  .section-main-03 {
-    .section-grid--3-col {
-      grid-template-columns: repeat(1, 1fr);
-      .section-card-block {
-        grid-column: unset;
-      }
-    }
-    .grid-2-col {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
   .section-wrapper.w-cta-container {
     //padding: 0;
 
@@ -76,6 +61,12 @@
 
   .fwidth-wrapper .gap-80 {
     gap: 40px;
+  }
+
+  .section-main-07 {
+    .grid-3-col {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
 
@@ -106,12 +97,6 @@
     }
   }
 
-  .section-main-03 {
-    .grid-2-col {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  }
-
   .w-home_about-container {
     .grid-3-col {
       grid-template-columns: repeat(1, 1fr);
@@ -136,4 +121,9 @@
 }
 
 @media screen and (max-width: 320px) {
+  .section-main-07 {
+    .grid-3-col {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 }
