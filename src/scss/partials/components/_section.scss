@@ -26,39 +26,44 @@
 }
 
 .header-section {
-  .section-heading-block {
-    flex: 0.7;
-  }
-
-  .section-image-block {
-    width: 100%;
-    aspect-ratio: 3 / 2;
-    border-radius: $round-60;
-    overflow: hidden;
-
-    img {
-      object-fit: cover;
-    }
-  }
-
-  @include screen-1024 {
-    .content-wrapper-row {
-      flex-direction: column;
+  &--var-1 {
+    .section-heading-block {
+      flex: 0.7;
     }
 
     .section-image-block {
-      aspect-ratio: 21 / 9;
+      width: 100%;
+      aspect-ratio: 3 / 2;
+      border-radius: $round-60;
+      overflow: hidden;
+
+      img {
+        object-fit: cover;
+      }
     }
 
-    .gap-20 {
-      gap: 60px;
+    @include screen-1024 {
+      .content-wrapper-row {
+        flex-direction: column;
+      }
+
+      .section-image-block {
+        aspect-ratio: 21 / 9;
+      }
+
+      .gap-20 {
+        gap: 60px;
+      }
+    }
+
+    @include screen-552 {
+      .section-image-block {
+        aspect-ratio: 0.9;
+      }
     }
   }
 
-  @include screen-552 {
-    .section-image-block {
-      aspect-ratio: 2 / 3;
-    }
+  &--var-2 {
   }
 }
 

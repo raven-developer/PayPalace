@@ -41,6 +41,17 @@
       padding-inline: 20%;
     }
   }
+
+  #w-about_values-section {
+    .content-wrapper-row {
+      flex-direction: column-reverse;
+    }
+
+    .section-image-block {
+      aspect-ratio: 4 / 3;
+      width: 100%;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {

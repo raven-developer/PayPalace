@@ -28,7 +28,7 @@
 .section-heading-block {
   @include flex-column;
   align-items: flex-start;
-  gap: $round-25;
+  gap: $round-15;
 
   .button {
     margin-top: $round-25;
@@ -136,7 +136,7 @@
     align-items: start;
   }
   .section-image-block {
-    aspect-ratio: 1.1;
+    aspect-ratio: 0.9;
     img {
       border-radius: $round-40;
     }
@@ -146,7 +146,7 @@
 .about_values {
   &--img-1 {
     width: calc(100% - 15%);
-    height: calc(100% - 10%);
+    height: calc(100% - 15%);
     border-radius: $round-20;
     overflow: hidden;
     position: absolute;
@@ -156,7 +156,7 @@
   }
   &--img-2 {
     width: calc(100% - 50%);
-    height: calc(100% - 30%);
+    height: calc(100% - 35%);
     border-radius: $round-20;
     overflow: hidden;
     position: absolute;

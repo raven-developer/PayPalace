@@ -1,6 +1,6 @@
 @use 'styles/style-hub' as *;
 
-.hero-heading {
+.page-heading {
   // H1
   @include font(600, 5rem, none);
   letter-spacing: -2px;
@@ -63,7 +63,6 @@
 span {
   // H5
   @include font(normal, 1.4375rem, none);
-  letter-spacing: -1px;
   @include screen-1024 {
     font-size: 1.25rem;
   }

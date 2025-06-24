@@ -16,20 +16,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // FUNCTION BELOW
 function setActive() {
-  const currentPage = window.location.pathname.split('/').filter(Boolean).pop().replace('.html', '');
+  const currentPage = document.body.getAttribute('data-page');
+
   const links = document.querySelectorAll('.nav-link-item a[data-page]');
   links.forEach((link) => {
     const listItem = link.closest('.nav-link-item');
     if (!listItem) return;
 
-    if (link.dataset.page === currentPage) {
-      if (window.matchMedia('(min-width: 769px)').matches) {
-        listItem.style.cssText = 'border-bottom: 1px solid #2a2f3c;';
-      } else {
-        listItem.style.cssText = 'border-bottom: 1px solid #e7ebf4;';
-      }
+    const isActive = link.dataset.page === currentPage;
+    const isDesktop = window.matchMedia('(min-width: 769px)').matches;
+
+    if (isActive) {
+      listItem.style.borderBottom = `1px solid ${isDesktop ? '#2a2f3c' : '#e7ebf4'}`;
     } else {
-      listItem.style.cssText = '';
+      listItem.style.borderBottom = '';
     }
   });
 }
@@ -43,7 +43,6 @@ function forMobile() {
   const navItems = document.querySelector('.nav-link-wrapper');
   const main = document.getElementById('main-content');
   const header = document.querySelector('header .section-wrapper');
-  let onScrollY = 0;
 
   function openMenu() {
     navLinks.classList.add('is_open');
@@ -64,28 +63,9 @@ function forMobile() {
   closeMenu();
 
   openBtn.addEventListener('click', () => {
-    onScrollY = window.scrollY;
-    main.classList.add('no-scroll');
-    main.style.position = 'fixed';
-    main.style.marginTop = '104px';
-    main.style.top = `-${onScrollY}px`;
-    main.style.left = '0';
-    main.style.width = '100%';
-
     openMenu();
   });
   closeBtn.addEventListener('click', () => {
-    main.classList.remove('no-scroll');
-
-    main.style.position = '';
-    main.style.marginTop = '';
-    main.style.top = '';
-    main.style.left = '';
-    main.style.width = '';
-
-    window.scrollTo(0, onScrollY);
-    onScrollY = 0;
-
     closeMenu();
   });
 }
