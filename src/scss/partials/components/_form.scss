@@ -1,40 +1,62 @@
 @use '../styles/style-hub' as *;
 
 // INPUT FIELD
-input,
-.input-field {
-  padding: 20px 36px;
+form {
+  margin-top: 40px;
+  @include flex-column;
+  gap: $round-25;
   width: 100%;
-  background-color: $white;
-  border-radius: 50px / 50px;
-  outline: 1px solid transparent;
-  transition: all 150ms ease-in-out;
 
-  &:focus {
-    outline-color: $blue-90;
-  }
-
-  &:valid {
-    outline-color: $blue-90;
-  }
-
-  &:invalid {
-    outline-color: $red;
-  }
-
-  &:not(&:focus) {
-    outline-color: transparent;
-  }
-
-  // AUTO FILLS
-  &:-webkit-autofill {
-    -webkit-text-fill-color: $blue-90;
-    -webkit-box-shadow: 0 0 0 1000px $white inset;
+  input,
+  .input-field {
+    padding: 20px 36px;
+    width: 100%;
     background-color: $white;
+    border-radius: 50px / 50px;
+    outline: 1px solid transparent;
+    transition: all 150ms ease-in-out;
+
+    &:focus {
+      outline-color: $blue-90;
+    }
+
+    &::placeholder {
+      opacity: 0.8;
+    }
+
+    &:not(&:focus, footer input) {
+      outline-color: #0a0f1c3d;
+    }
+
+    // AUTO FILLS
+    &:-webkit-autofill {
+      -webkit-text-fill-color: $blue-90;
+      -webkit-box-shadow: 0 0 0 1000px $white inset;
+      background-color: $white;
+    }
+
+    &:-moz-autofill {
+      box-shadow: 0 0 0 1000px $white inset;
+      -moz-text-fill-color: $blue-90;
+    }
   }
 
-  &:-moz-autofill {
-    box-shadow: 0 0 0 1000px $white inset;
-    -moz-text-fill-color: $blue-90;
+  textarea {
+    resize: none;
+    min-height: 180px;
+    overflow-y: hidden;
+  }
+
+  label {
+    color: $blue-50;
+  }
+
+  .input-group {
+    @include flex-column;
+    gap: $round-10;
+  }
+
+  .button {
+    margin-top: 20px;
   }
 }

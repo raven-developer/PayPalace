@@ -27,8 +27,10 @@ function setActive() {
     const isDesktop = window.matchMedia('(min-width: 769px)').matches;
 
     if (isActive) {
-      listItem.style.borderBottom = `1px solid ${isDesktop ? '#2a2f3c' : '#e7ebf4'}`;
+      listItem.style.color = `#005cff`;
+      listItem.style.borderBottom = '1px solid #005cff';
     } else {
+      listItem.style.color = '';
       listItem.style.borderBottom = '';
     }
   });
@@ -69,6 +71,33 @@ function forMobile() {
     closeMenu();
   });
 }
+
+function limitInput(inputElement, maxChars, maxWords = null) {
+  inputElement.addEventListener('input', () => {
+    let content = inputElement.value;
+
+    // Word limit (if specified)
+    if (maxWords !== null) {
+      const words = content.trim().split(/\s+/).filter(Boolean);
+      if (words.length > maxWords) {
+        content = words.slice(0, maxWords).join(' ');
+      }
+    }
+
+    // Character limit
+    if (content.length > maxChars) {
+      content = content.slice(0, maxChars);
+    }
+
+    inputElement.value = content;
+  });
+}
+
+limitInput(fname, 50);
+limitInput(email, 254);
+limitInput(subject, 128);
+
+limitInput(text_area, 500, 120);
 
 // STICKY
 

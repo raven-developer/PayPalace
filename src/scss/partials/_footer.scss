@@ -80,6 +80,10 @@ footer {
   }
 }
 
+.foot-link-item a:hover {
+  color: $blue-70;
+}
+
 // RESPONSIVE
 @media screen and (max-width: 992px) {
   footer {

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
-    <title>TEMPLATE</title>
+    <title>Contact Us</title>
 
     <!-- Favicon -->
     <link rel="icon" href="../assets/paypalace-favicon.png" type="image/x-icon" />
@@ -66,11 +66,112 @@
         </div>
       </section>
 
-      <section class="REPLACE-section section" id="w-REPLACE-section">
-        <div class="section-wrapper w-REPLACE-container">
-          <div class="content-wrapper">
+      <section class="contact-section-1 section" id="w-form-section">
+        <div class="section-wrapper w-form-container">
+          <div class="content-wrapper-col section-card section-card--form">
+            <div class="content-block section-heading-block col">
+              <h2 class="section-heading center-text">Talk to Us—We’re Listening</h2>
+              <p class="par-reg center-text">
+                We’d love to hear from you—whether it’s a question, suggestion, or just a quick hello. Our team is always here to connect
+                and help in any way we can.
+              </p>
+            </div>
+            <div class="content-block section-form-block col">
+              <form action="">
+                <form action="#" method="POST" class="contact-form">
+                  <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input
+                      class="input-field"
+                      type="text"
+                      name="name"
+                      id="name"
+                      placeholder="Your Full Name"
+                      autocomplete="name"
+                      required
+                    />
+                  </div>
+
+                  <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input
+                      class="input-field"
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="Email Address"
+                      autocomplete="email"
+                      required
+                    />
+                  </div>
+
+                  <div class="input-group">
+                    <label for="subject">Subject</label>
+                    <input class="input-field" type="text" name="subject" id="subject" placeholder="Subject" required />
+                  </div>
+
+                  <div class="input-group">
+                    <label for="message">Message</label>
+                    <textarea class="input-field text-area" name="message" id="text-area" placeholder="Your message..." required></textarea>
+                  </div>
+
+                  <button type="submit" class="button button--is_primary">
+                    <span class="button-span">Send Message</span>
+                  </button>
+                </form>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section-2 section" id="w-location-section">
+        <div class="section-wrapper w-location-container">
+          <div class="content-wrapper-col gap-50">
             <div class="content-block section-heading-block">
               <h2 class="section-heading">PayPalace Headquarters</h2>
+            </div>
+            <div class="content-block section-card-block">
+              <div class="grid-3-col gap-30">
+                <div class="is_card icon-card icon-card--variant-1 ic-5-1">
+                  <div class="card-icon">
+                    <img src="../assets/icons/Location.svg" alt="Location Pin Icon" />
+                  </div>
+                  <div class="card-content">
+                    <h3 class="section-heading card-label">Los Angeles, CA</h3>
+                    <p class="par-sm">2553 Gateway Avenue <br />Los Angeles, CA 90017</p>
+                  </div>
+                </div>
+                <div class="is_card icon-card icon-card--variant-1 ic-5-2">
+                  <div class="card-icon">
+                    <img src="../assets/icons/Location.svg" alt="Location Pin Icon" />
+                  </div>
+                  <div class="card-content">
+                    <h3 class="section-heading card-label">New York, NY</h3>
+                    <p class="par-sm">2041 Godfrey Road <br />New York, NY 10005</p>
+                  </div>
+                </div>
+                <div class="is_card icon-card icon-card--variant-1 ic-5-3">
+                  <div class="card-icon">
+                    <img src="../assets/icons/Location.svg" alt="Location Pin Icon" />
+                  </div>
+                  <div class="card-content">
+                    <h3 class="section-heading card-label">Chicago, IL</h3>
+                    <p class="par-sm">156 Oak Avenue <br />North 60064</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section section" id="w-cta-section">
+        <div class="section-wrapper w-cta-container">
+          <div class="content-wrapper-col section-card section-card--color">
+            <div class="content-block section-heading-block col">
+              <h2 class="section-heading center-text">Get in Touch and Unlock New Revenue Streams</h2>
+              <a class="button button--is_primary" href="../contact/"><span class="button-span">Upgrade Your Store</span></a>
             </div>
           </div>
         </div>

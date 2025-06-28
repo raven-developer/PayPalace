@@ -93,6 +93,8 @@ span {
 .par-reg {
   color: $black-90;
 }
+
+label,
 .input-field,
 .par-sm {
   // H6
@@ -167,4 +169,8 @@ span {
   &--3-col {
     @extend .grid-3-col;
   }
+}
+
+a:not(.foot-link-item a, .nav-link-item a) {
+  color: $blue-70;
 }

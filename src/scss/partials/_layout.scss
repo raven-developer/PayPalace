@@ -165,3 +165,18 @@
     z-index: 1;
   }
 }
+
+.contact-section-2 {
+  .icon-card {
+    .card-icon {
+      height: 32px;
+      width: 32px;
+    }
+
+    .card-label {
+      font-size: 1.875rem;
+      letter-spacing: -1px;
+      margin: 1rem 0 0.5rem;
+    }
+  }
+}
