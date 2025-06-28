@@ -1,0 +1,44 @@
+[
+  {
+    "index": 0,
+    "name": "Member Name",
+    "position": "Member Position",
+    "image": "../assets/resolven6 2.jpg",
+    "alt": "Seamlessly sync your systems for efficiency"
+  },
+  {
+    "index": 1,
+    "name": "Richard Lowe",
+    "position": "Founder & CEO",
+    "image": "../assets/team.jpg",
+    "alt": "Richard Lowe, Founder & CEO"
+  },
+  {
+    "index": 2,
+    "name": "Sarah Lin",
+    "position": "Chief Operating Officer",
+    "image": "../assets/team-1.jpg",
+    "alt": "Sarah Lin, Chief Operating Officer"
+  },
+  {
+    "index": 3,
+    "name": "Javier Ramos",
+    "position": "Head of Design",
+    "image": "../assets/team-4.jpg",
+    "alt": "Javier Ramos, Head of Design"
+  },
+  {
+    "index": 4,
+    "name": "Emily Tran",
+    "position": "Marketing Director",
+    "image": "../assets/team-3.jpg",
+    "alt": "Emily Tran, Marketing Director"
+  },
+  {
+    "index": 5,
+    "name": "Ava Patel",
+    "position": "Customer Success Manager",
+    "image": "../assets/team-2.jpg",
+    "alt": "Ava Patel, Customer Success Manager"
+  }
+]

@@ -63,6 +63,7 @@
 span {
   // H5
   @include font(normal, 1.4375rem, none);
+  letter-spacing: -0.5px;
   @include screen-1024 {
     font-size: 1.25rem;
   }

@@ -72,6 +72,17 @@ function forMobile() {
   });
 }
 
+// STICKY
+window.addEventListener('scroll', () => {
+  const mainNav = document.getElementById('global-header');
+  const onScroll = window.onScroll || document.documentElement.scrollTop;
+  if (onScroll > 20) {
+    mainNav.classList.add('is_fixed');
+  } else {
+    mainNav.classList.remove('is_fixed');
+  }
+});
+
 function limitInput(inputElement, maxChars, maxWords = null) {
   inputElement.addEventListener('input', () => {
     let content = inputElement.value;
@@ -93,20 +104,22 @@ function limitInput(inputElement, maxChars, maxWords = null) {
   });
 }
 
+const fname = document.getElementById('name');
+const email = document.getElementById('email');
+const subject = document.getElementById('subject');
+const text_area = document.getElementById('text_area');
+
 limitInput(fname, 50);
 limitInput(email, 254);
 limitInput(subject, 128);
-
 limitInput(text_area, 500, 120);
 
-// STICKY
+const logoCarousels = document.querySelectorAll('.logo-carousel-wrapper');
 
-window.addEventListener('scroll', () => {
-  const mainNav = document.getElementById('global-header');
-  const onScroll = window.onScroll || document.documentElement.scrollTop;
-  if (onScroll > 20) {
-    mainNav.classList.add('is_fixed');
-  } else {
-    mainNav.classList.remove('is_fixed');
-  }
+logoCarousels.forEach((carousel) => {
+  const items = Array.from(carousel.children);
+  items.forEach((item) => {
+    const clone = item.cloneNode(true);
+    carousel.appendChild(clone);
+  });
 });

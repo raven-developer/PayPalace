@@ -395,6 +395,7 @@ span {
   font-optical-sizing: auto;
   text-transform: none;
   text-decoration: none;
+  letter-spacing: -0.5px;
 }
 @media (max-width: 1024px) {
   .par-reg,
