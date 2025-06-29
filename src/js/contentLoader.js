@@ -104,15 +104,19 @@ function limitInput(inputElement, maxChars, maxWords = null) {
   });
 }
 
-const fname = document.getElementById('name');
-const email = document.getElementById('email');
-const subject = document.getElementById('subject');
-const text_area = document.getElementById('text_area');
+document.addEventListener('DOMContentLoaded', () => {
+  if (dataPage === 'contact') {
+    const fname = document.getElementById('name');
+    const email = document.getElementById('email');
+    const subject = document.getElementById('subject');
+    const text_area = document.getElementById('text_area');
 
-limitInput(fname, 50);
-limitInput(email, 254);
-limitInput(subject, 128);
-limitInput(text_area, 500, 120);
+    if (fname) limitInput(fname, 50);
+    if (email) limitInput(email, 254);
+    if (subject) limitInput(subject, 128);
+    if (text_area) limitInput(text_area, 500, 120);
+  }
+});
 
 const logoCarousels = document.querySelectorAll('.logo-carousel-wrapper');
 

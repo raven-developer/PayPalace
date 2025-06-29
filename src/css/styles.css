@@ -309,6 +309,7 @@ div {
   .page-heading {
     font-size: 3.25rem;
     letter-spacing: -1.5px;
+    line-height: 1.2;
   }
 }
 @media (max-width: 320px) {
@@ -1057,6 +1058,7 @@ header.is_fixed {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  transition: all 0.2s cubic-bezier(0.35, 0, 0.175, 1);
 }
 @media (max-width: 552px) {
   .text-card--variant-1 {
@@ -1076,16 +1078,24 @@ header.is_fixed {
 .text-card--variant-1 .card-label {
   color: #ffffff;
 }
+.text-card--variant-1:hover {
+  transform: scale3d(1.045, 1.045, 1) rotate(4deg);
+}
 
 .img-card--blog-variant .card-img-block {
   border-radius: 20px;
   overflow: hidden;
+}
+.img-card--blog-variant .blog-title {
+  transition: all 0.4s cubic-bezier(0.35, 0, 0.175, 1);
 }
 .img-card--blog-variant .blog-ftd-image {
   max-width: 100%;
   width: 100%;
   aspect-ratio: 0.889;
   margin-bottom: 25px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.35, 0, 0.175, 1);
 }
 .img-card--blog-variant .blog-ftd-image img {
   object-fit: cover;
@@ -1104,6 +1114,17 @@ header.is_fixed {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+.img-card--blog-variant:hover .blog-ftd-image {
+  transform: scale3d(1.05, 1.05, 1) rotate(4deg);
+}
+@media (max-width: 768px) {
+  .img-card--blog-variant:hover .blog-ftd-image {
+    transform: scale3d(1.02, 1.02, 1) rotate(3deg);
+  }
+}
+.img-card--blog-variant:hover .blog-title {
+  color: #005cff;
 }
 .img-card--team-variant {
   border-radius: 30px;

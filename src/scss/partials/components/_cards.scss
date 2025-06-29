@@ -74,6 +74,8 @@
     border-radius: $round-20;
     @include flex-column;
     gap: $round-15;
+
+    transition: all 0.2s cubic-bezier(0.35, 0, 0.175, 1);
     @include screen-552 {
       padding: 30px 20px;
     }
@@ -92,6 +94,10 @@
     .card-label {
       color: $white;
     }
+
+    &:hover {
+      transform: scale3d(1.045, 1.045, 1) rotate(4deg);
+    }
   }
 }
 
@@ -101,11 +107,17 @@
       border-radius: $round-20;
       overflow: hidden;
     }
+
+    .blog-title {
+      transition: all 0.4s cubic-bezier(0.35, 0, 0.175, 1);
+    }
     .blog-ftd-image {
       max-width: 100%;
       width: 100%;
       aspect-ratio: 0.889;
       margin-bottom: 25px;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.35, 0, 0.175, 1);
 
       img {
         object-fit: cover;
@@ -126,6 +138,19 @@
       @include flex-row;
       @include center-x;
       justify-content: space-between;
+    }
+
+    &:hover {
+      .blog-ftd-image {
+        transform: scale3d(1.05, 1.05, 1) rotate(4deg);
+        @include screen-768 {
+          transform: scale3d(1.02, 1.02, 1) rotate(3deg);
+        }
+      }
+
+      .blog-title {
+        color: $blue-70;
+      }
     }
   }
 

@@ -1,3 +1,5 @@
+const dataPage = document.body.getAttribute('data-page');
+
 async function loadHeader() {
   const response = await fetch('../components/header.html');
   if (!response.ok) throw new Error('Failed to load header.');

@@ -1,0 +1,122 @@
+[
+  {
+    "index": 0,
+    "title": "The Future of Seamless Payment Systems",
+    "slug": "the-future-of-seamless-payment-systems",
+    "author": "Richard Lowe",
+    "date": "June 15 2025",
+    "image": "../assets/the-future-of-seamless-payment-systems.jpg",
+    "alt": "Mobile payment being used in a café",
+    "excerpt": "Explore how integrated payment platforms are shaping the future of digital commerce."
+  },
+  {
+    "index": 1,
+    "title": "Designing User-Friendly Interfaces",
+    "slug": "designing-user-friendly-interfaces",
+    "author": "Javier Ramos",
+    "date": "June 12 2025",
+    "image": "../assets/designing-user-friendly-interfaces.jpg",
+    "alt": "Team designing UI on whiteboard",
+    "excerpt": "A look at the principles behind creating intuitive and accessible user experiences."
+  },
+  {
+    "index": 2,
+    "title": "Marketing Strategies That Convert",
+    "slug": "marketing-strategies-that-convert",
+    "author": "Emily Tran",
+    "date": "June 10 2025",
+    "image": "../assets/marketing-strategies-that-convert.jpg",
+    "alt": "Marketing team in a strategy meeting",
+    "excerpt": "Effective methods to boost engagement and drive customer actions through marketing."
+  },
+  {
+    "index": 3,
+    "title": "Operational Excellence in Tech Companies",
+    "slug": "operational-excellence-in-tech-companies",
+    "author": "Sarah Lin",
+    "date": "June 08 2025",
+    "image": "../assets/operational-excellence-in-tech-companies.jpg",
+    "alt": "Operations team collaborating on process flow",
+    "excerpt": "How to streamline internal processes and improve team efficiency in growing startups."
+  },
+  {
+    "index": 4,
+    "title": "How Customer Feedback Shapes Product Development",
+    "slug": "how-customer-feedback-shapes-product-development",
+    "author": "Ava Patel",
+    "date": "June 06 2025",
+    "image": "../assets/how-customer-feedback-shapes-product-development.jpg",
+    "alt": "Customer feedback form on a tablet",
+    "excerpt": "Listening to users can lead to innovative features and better customer retention."
+  },
+  {
+    "index": 5,
+    "title": "The Role of AI in Fintech",
+    "slug": "the-role-of-ai-in-fintech",
+    "author": "Richard Lowe",
+    "date": "June 05 2025",
+    "image": "../assets/the-role-of-ai-in-fintech.jpg",
+    "alt": "Abstract AI representation in a tech environment",
+    "excerpt": "Discover how artificial intelligence is revolutionizing financial technologies today."
+  },
+  {
+    "index": 6,
+    "title": "Building Brand Loyalty Online",
+    "slug": "building-brand-loyalty-online",
+    "author": "Emily Tran",
+    "date": "June 02 2025",
+    "image": "../assets/the-future-of-seamless-payment-systems.jpg",
+    "alt": "Smiling customers using mobile devices",
+    "excerpt": "Practical tips for cultivating customer loyalty in a digital-first market."
+  },
+  {
+    "index": 7,
+    "title": "From Concept to Launch: The Design Journey",
+    "slug": "from-concept-to-launch-the-design-journey",
+    "author": "Javier Ramos",
+    "date": "June 01 2025",
+    "image": "../assets/designing-user-friendly-interfaces.jpg",
+    "alt": "Designer sketching app wireframes",
+    "excerpt": "An inside look at the creative process behind successful product designs."
+  },
+  {
+    "index": 8,
+    "title": "Why Culture Matters in Startups",
+    "slug": "why-culture-matters-in-startups",
+    "author": "Sarah Lin",
+    "date": "May 29 2025",
+    "image": "../assets/marketing-strategies-that-convert.jpg",
+    "alt": "Team celebrating a milestone together",
+    "excerpt": "Creating a strong team culture is key to long-term success and employee retention."
+  },
+  {
+    "index": 9,
+    "title": "Empowering Support Teams with Technology",
+    "slug": "empowering-support-teams-with-technology",
+    "author": "Ava Patel",
+    "date": "May 27 2025",
+    "image": "../assets/how-customer-feedback-shapes-product-development.jpg",
+    "alt": "Customer service team using dashboards",
+    "excerpt": "Tools and techniques to help support staff deliver exceptional customer experiences."
+  },
+  {
+    "index": 10,
+    "title": "Security First: Protecting Customer Data",
+    "slug": "security-first-protecting-customer-data",
+    "author": "Richard Lowe",
+    "date": "May 25 2025",
+    "image": "../assets/the-role-of-ai-in-fintech.jpg",
+    "alt": "Cybersecurity concept with locks and code",
+    "excerpt": "How companies can implement security practices to safeguard user information."
+  },
+  {
+    "index": 11,
+    "title": "The Power of Cross-Functional Teams",
+    "slug": "the-power-of-cross-functional-teams",
+    "author": "Sarah Lin",
+    "date": "May 22 2025",
+    "image": "../assets/the-role-of-ai-in-fintech.jpg",
+    "alt": "Diverse team discussing in a meeting room",
+    "excerpt": "Collaboration between departments can drive innovation and solve complex problems."
+  }
+]
